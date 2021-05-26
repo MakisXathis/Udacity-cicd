@@ -31,6 +31,10 @@ jobs:
           keys:
             - "npm-packages"
       - run: npm audit
+      - run: 
+         command: npm audit fix
+         when: on_fail
+      
 
 workflows:
   my_workflow:
